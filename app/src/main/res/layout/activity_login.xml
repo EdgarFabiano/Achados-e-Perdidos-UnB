@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fbutton="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    tools:context=".LoginActivity">>
+
+    <ImageView
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo_unb"
+        android:id="@+id/logo_unb" />
+
+
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/center_buttons"
+        android:layout_below="@+id/logo_unb"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp">
+
+    </RelativeLayout>
+
+    <com.facebook.login.widget.LoginButton
+        android:layout_below="@+id/center_buttons"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/facebook_login_button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="20dp"
+        android:contentDescription="@string/login_desc"
+        />
+
+
+
+</RelativeLayout>
