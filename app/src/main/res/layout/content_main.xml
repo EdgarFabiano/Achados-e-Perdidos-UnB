@@ -15,5 +15,36 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="Registro de objetos"
+        android:id="@+id/textView2" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Encontrei um objeto!"
+            android:id="@+id/button_achei"
+            android:layout_margin="20dp"
+            android:background="@drawable/mybutton"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Perdi um objeto!"
+            android:id="@+id/button_perdi"
+            android:layout_below="@+id/button_achei"
+            android:layout_margin="20dp"
+            android:background="@drawable/mybutton"
+            android:layout_centerHorizontal="true" />
+
+
+    </RelativeLayout>
+
+
 </RelativeLayout>
