@@ -1,24 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Importar" />
-        <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Galeria" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
-        <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Ferramentas" />
-    </group>
+    <item android:title="Objetos">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_home"
+                    android:icon="@drawable/ic_menu_home"
+                    android:title="Início"
+                    android:checked="true"/>
+                <item
+                    android:id="@+id/nav_encontrei"
+                    android:icon="@drawable/ic_zoom_in_white_24dp"
+                    android:title="Encontrei um objeto" />
+                <item
+                    android:id="@+id/nav_perdi"
+                    android:icon="@drawable/sumiu"
+                    android:title="Perdi um objeto" />
+                <item
+                    android:id="@+id/nav_encontrados"
+                    android:icon="@drawable/ic_find_in_page_white_24dp"
+                    android:title="Encontrados por mim" />
+                <item
+                    android:id="@+id/nav_departamentos"
+                    android:icon="@drawable/ic_list_white_24dp"
+                    android:title="Lista de departamentos" />
+            </group>
+        </menu>
+    </item>
 
     <item android:title="Comunicação">
         <menu>
@@ -33,8 +43,12 @@
         </menu>
     </item>
 
-    <item android:title="Profile">
+    <item android:title="Perfil">
         <menu>
+            <item
+                android:id="@+id/nav_configuracoes"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Configurações" />
             <item
                 android:id="@+id/nav_logout"
                 android:icon="@drawable/com_facebook_close"
