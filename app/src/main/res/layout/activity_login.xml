@@ -5,7 +5,7 @@
     xmlns:fbutton="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/white"
-    tools:context=".LoginActivity">>
+    tools:context=".LoginActivity">
 
     <ImageView
         android:layout_width="110dp"
@@ -16,26 +16,13 @@
         android:id="@+id/logo_unb" />
 
 
-
-
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/center_buttons"
-        android:layout_below="@+id/logo_unb"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp">
-
-    </RelativeLayout>
-
     <com.facebook.login.widget.LoginButton
-        android:layout_below="@+id/center_buttons"
         android:layout_centerHorizontal="true"
         android:id="@+id/facebook_login_button"
+        android:layout_centerVertical="true"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_margin="20dp"
-        android:contentDescription="@string/login_desc"
         />
 
 
