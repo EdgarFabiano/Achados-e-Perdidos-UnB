@@ -14,7 +14,7 @@ public class TutorialActivity extends VerticalIntro{
     @Override
     protected void init() {
         addIntroItem(new VerticalIntroItem.Builder()
-                .backgroundColor(R.color.orange)
+                .backgroundColor(R.color.colorAccent)
                 .image(R.drawable.lupa)
                 .title("Bem vindo ao Achados e Perdidos UnB")
                 .text("Esse aplicativo veio para facilitar a interação das pessoas que perdem com as que encontram objetos perdidos pelo campus.")
