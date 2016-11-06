@@ -3,50 +3,62 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/colorAccent"
     android:layout_height="match_parent"
     android:id="@+id/dept"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Registro de objetos"
-        android:id="@+id/textView2"
-        android:layout_marginTop="16dp"
-        android:layout_marginLeft="16dp"/>
-
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true">
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp">
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Encontrei um objeto!"
-            android:paddingRight="16dp"
-            android:paddingLeft="16dp"
+            android:text="Encontrei um objeto! :]"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"
             android:id="@+id/button_achei"
             android:layout_margin="20dp"
-            android:background="@drawable/mybutton"
+            android:background="@color/colorPrimaryLight"
             android:layout_centerHorizontal="true" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Perdi um objeto!"
+            android:text="Perdi um objeto! :["
             android:paddingRight="16dp"
             android:paddingLeft="16dp"
             android:id="@+id/button_perdi"
             android:layout_below="@+id/button_achei"
-            android:layout_margin="20dp"
-            android:background="@drawable/mybutton"
-            android:layout_centerHorizontal="true" />
+            android:background="@color/amber"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_alignLeft="@+id/button_achei"
+            android:layout_alignStart="@+id/button_achei"
+            android:layout_alignRight="@+id/button_achei"
+            android:layout_alignEnd="@+id/button_achei" />
+
 
 
     </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:textSize="32sp"
+
+        android:layout_height="wrap_content"
+        android:text="Escolha sua opção!"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:id="@+id/textView2"
+        android:layout_marginTop="151dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>

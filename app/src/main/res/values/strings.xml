@@ -10,4 +10,21 @@
     <string name="cadastrar">Cadastrar</string>
     <string name="login_desc">Descrição</string>
     <string name="facebook_app_id">teste</string>
+
+    <string-array name="locais_spinner">
+        <item>CIC</item>
+        <item>ICC Sul</item>
+        <item>ICC Norte</item>
+        <item>ICC Centro</item>
+        <item>Faculdade de Tecnologia</item>
+    </string-array>
+
+    <string-array name="objetos_view">
+        <item>Casaco azul - ICC Centro</item>
+        <item>Garrafa Nike - CIC</item>
+        <item>Identidade - FT</item>
+        <item>Caderno com Foto - ICC Centro</item>
+        <item>Mangá Magi - PAT</item>
+    </string-array>
+
 </resources>
