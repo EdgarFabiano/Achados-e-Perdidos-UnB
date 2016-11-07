@@ -1,15 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorAccent"
+    android:background="@color/light_gray"
+    android:orientation="vertical"
+    android:padding="12dp"
     android:id="@+id/dept"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registre o objeto encontrado:"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/textView3" />
 
     <TextView
         android:text="Título:"
@@ -19,21 +30,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="33dp"
-        android:id="@+id/textView7"
-        android:layout_below="@+id/textView3"
-        android:layout_alignLeft="@+id/editText3"
-        android:layout_alignStart="@+id/editText3" />
+        android:id="@+id/textView7" />
 
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="35dp"
-        android:inputType="textPersonName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:ems="10"
-        android:background="@color/white"
         android:id="@+id/editText3"
-        android:layout_below="@+id/textView7"
-        android:layout_alignLeft="@+id/textView9"
-        android:layout_alignStart="@+id/textView9"
         android:layout_marginTop="10dp" />
 
     <TextView
@@ -44,11 +47,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView9"
-
-        android:layout_below="@+id/editText3"
-        android:layout_alignLeft="@+id/spinner"
-        android:layout_alignStart="@+id/spinner"
         android:layout_marginTop="24dp" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:id="@+id/spinner"
+        android:entries="@array/locais_spinner" />
 
     <TextView
         android:text="Tags:"
@@ -57,70 +62,30 @@
         android:textSize="20sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/spinner"
-        android:layout_alignLeft="@+id/spinner"
-        android:layout_alignStart="@+id/spinner"
-        android:layout_marginTop="20dp"
-        android:id="@+id/textView10"
-        android:layout_alignRight="@+id/textView9"
-        android:layout_alignEnd="@+id/textView9" />
+        android:layout_marginTop="24dp"
+        android:id="@+id/textView10" />
 
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="35dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:background="@color/white"
         android:id="@+id/editText4"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/textView10"
-        android:layout_alignLeft="@+id/textView10"
-        android:layout_alignStart="@+id/textView10" />
+        android:layout_marginTop="10dp"/>
 
     <Button
         android:text="Selecionar Foto"
         android:layout_width="170dp"
         android:layout_height="wrap_content"
         android:id="@+id/selecionar_foto"
-        android:background="@color/white"
-        android:layout_marginTop="27dp"
-        android:layout_below="@+id/editText4"
-        android:layout_alignLeft="@+id/editText4"
-        android:layout_alignStart="@+id/editText4" />
+        android:layout_marginTop="27dp"/>
 
     <Button
         android:text="Ok!"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="@color/colorPrimaryDark"
-        android:textColor="@color/black"
-        android:layout_toRightOf="@+id/editText4"
-        android:layout_toEndOf="@+id/editText4"
-        android:layout_marginBottom="31dp"
+        android:background="@drawable/mybutton"
         android:id="@+id/button_ok_registro" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Registre o objeto encontrado:"
-        android:textStyle="bold"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        android:layout_marginTop="81dp"
-        android:id="@+id/textView3"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
 
-    <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="35dp"
-        android:id="@+id/spinner"
-        android:background="@color/white"
-        android:entries="@array/locais_spinner"
-        android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/textView3"
-        android:layout_alignStart="@+id/textView3" />
-
-
-</RelativeLayout>
+</LinearLayout>

@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorAccent"
+    android:background="@color/light_gray"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity">
 
@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:text="Objetos:"
         android:textStyle="bold"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="30sp"
         android:layout_marginTop="48dp"
         android:layout_alignParentTop="true"
@@ -23,12 +23,10 @@
         android:id="@+id/textView5" />
 
     <ListView
-        android:background="@color/white"
         android:layout_width="300dp"
         android:layout_height="380dp"
-        android:layout_marginTop="13dp"
         android:entries="@array/objetos_view"
-        android:layout_below="@+id/textView5"
+        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
     <Button
@@ -36,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button2"
-        android:background="@color/white"
+        android:background="@drawable/mybutton"
         android:layout_marginBottom="17dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />

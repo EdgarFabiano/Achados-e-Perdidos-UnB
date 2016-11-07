@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/colorAccent"
+    android:background="@color/light_gray"
     android:layout_height="match_parent"
     android:id="@+id/dept"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
@@ -24,6 +24,7 @@
             android:paddingLeft="20dp"
             android:id="@+id/button_achei"
             android:layout_margin="20dp"
+            android:onClick="clique"
             android:background="@color/colorPrimaryLight"
             android:layout_centerHorizontal="true" />
 
@@ -36,6 +37,7 @@
             android:id="@+id/button_perdi"
             android:layout_below="@+id/button_achei"
             android:background="@color/amber"
+            android:onClick="clique"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
             android:layout_alignLeft="@+id/button_achei"
@@ -53,7 +55,7 @@
 
         android:layout_height="wrap_content"
         android:text="Escolha sua opção!"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textStyle="bold"
         android:id="@+id/textView2"
         android:layout_marginTop="151dp"

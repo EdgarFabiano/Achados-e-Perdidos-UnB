@@ -29,29 +29,15 @@ import com.example.edgar.achadoseperdidosunb.Fragments.PerdiFragment;
 
 public class MainActivity extends AppCompatActivity {
     boolean doubleBackToExitPressedOnce = false;
+    private NavigationView navigationView;
 
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START))
             drawer.closeDrawer(GravityCompat.START);
-        else {
-            if (doubleBackToExitPressedOnce) {
-                super.onBackPressed();
-                finish();
-                return;
-            }
-
-            this.doubleBackToExitPressedOnce = true;
-            Toast.makeText(this, "Pressione VOLTAR novamente para sair", Toast.LENGTH_SHORT).show();
-
-            new Handler().postDelayed(new Runnable() {
-
-                @Override
-                public void run() {
-                    doubleBackToExitPressedOnce=false;
-                }
-            }, 2000);
-        }
+        else
+           drawer.openDrawer(GravityCompat.START);
+        
     }
 
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -61,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
         // Insert the fragment by replacing any existing fragment
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.flContent, new HomeFragment()).commit();
-
 
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {
@@ -106,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -161,6 +146,41 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
+    }
+
+    public void clique(View view){
+        Fragment fragment = null;
+        Class fragmentClass = DepartamentosFragment.class;
+        Menu menu = navigationView.getMenu();
+        int item = 0;
+
+        if(view.getId() == R.id.button_achei) {
+            fragmentClass = EncontreiFragment.class;
+            item = 1;
+
+        }
+        else if(view.getId() == R.id.button_perdi) {
+            fragmentClass = PerdiFragment.class;
+            item = 2;
+        }
+
+        try {
+            fragment = (Fragment) fragmentClass.newInstance();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        // Insert the fragment by replacing any existing fragment
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.flContent, fragment).commit();
+
+
+        menu.getItem(item).setChecked(true);
+        setTitle(menu.getItem(item).getTitle());
+
+        // Close the navigation drawer
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
     }
 
 }
