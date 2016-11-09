@@ -12,7 +12,7 @@
     <string name="facebook_app_id">teste</string>
 
     <string-array name="locais_spinner">
-        <item>Escolha o local</item>
+        <item>Escolha o departamento</item>
         <item>CIC</item>
         <item>ICC Sul</item>
         <item>ICC Norte</item>

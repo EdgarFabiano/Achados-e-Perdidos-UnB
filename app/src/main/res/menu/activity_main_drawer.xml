@@ -8,8 +8,7 @@
                 <item
                     android:id="@+id/nav_home"
                     android:icon="@drawable/ic_menu_home"
-                    android:title="Início"
-                    android:checked="true"/>
+                    android:title="Início" />
                 <item
                     android:id="@+id/nav_encontrei"
                     android:icon="@drawable/ic_zoom_in_white_24dp"
@@ -22,10 +21,10 @@
                     android:id="@+id/nav_encontrados"
                     android:icon="@drawable/ic_find_in_page_white_24dp"
                     android:title="Encontrados por mim" />
-                <item
+               <!-- <item
                     android:id="@+id/nav_departamentos"
                     android:icon="@drawable/ic_list_white_24dp"
-                    android:title="Lista de departamentos" />
+                    android:title="Lista de departamentos" />-->
             </group>
         </menu>
     </item>

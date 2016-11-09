@@ -12,7 +12,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="140dp"
-        android:background="@color/colorPrimaryLight"
+        android:background="@color/gray"
         android:elevation="10dp">
 
         <TextView
@@ -41,7 +41,7 @@
             android:id="@+id/txtDept"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Departamento"
+            android:text="Prédio"
             android:gravity="center_vertical"
             android:textSize="15dp"
             android:layout_below="@id/txtDesc"

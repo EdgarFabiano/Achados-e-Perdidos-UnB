@@ -27,9 +27,13 @@ import com.example.edgar.achadoseperdidosunb.Fragments.EncontreiFragment;
 import com.example.edgar.achadoseperdidosunb.Fragments.HomeFragment;
 import com.example.edgar.achadoseperdidosunb.Fragments.PerdiFragment;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
-    boolean doubleBackToExitPressedOnce = false;
     private NavigationView navigationView;
+    public static List<ObjetoInfo> lista = new ArrayList<>();
+    public static List<ObjetoInfo> minhas = new ArrayList<>();
 
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -43,6 +47,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        lista.add(new ObjetoInfo("Celular Motorola","Cor branca", "FT", "Auditório da Elétrica"));
+        lista.add(new ObjetoInfo("Notebook Lenovo", "Cor cinza", "CIC", "Sala de reuniões 1"));
+        lista.add(new ObjetoInfo("Guarda-chuva", "Verde", "PAT", "PAT BT-45"));
+        lista.add(new ObjetoInfo("Carregador de celular", "não informado", "BSA", "AT-13/47"));
+        lista.add(new ObjetoInfo("Caderno", "Capa da Hotwheels", "ICC Sul", "BT-160"));
+
 
         // Insert the fragment by replacing any existing fragment
         FragmentManager fragmentManager = getSupportFragmentManager();
@@ -111,10 +121,10 @@ public class MainActivity extends AppCompatActivity {
                 } else if (id == R.id.nav_encontrados) {
                     fragmentClass = EncontradosFragment.class;
 
-                } else if (id == R.id.nav_departamentos) {
+                } /*else if (id == R.id.nav_departamentos) {
                     fragmentClass = DepartamentosFragment.class;
 
-                } else if (id == R.id.nav_share) {
+                }*/else if (id == R.id.nav_share) {
 
                 } else if (id == R.id.nav_send) {
 
@@ -157,11 +167,13 @@ public class MainActivity extends AppCompatActivity {
         if(view.getId() == R.id.button_achei) {
             fragmentClass = EncontreiFragment.class;
             item = 1;
+            setTitle("Encontrei um objeto");
 
         }
         else if(view.getId() == R.id.button_perdi) {
             fragmentClass = PerdiFragment.class;
             item = 2;
+            setTitle("Perdi um objeto");
         }
 
         try {
@@ -174,9 +186,7 @@ public class MainActivity extends AppCompatActivity {
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.flContent, fragment).commit();
 
-
-        menu.getItem(item).setChecked(true);
-        setTitle(menu.getItem(item).getTitle());
+       // menu.getItem(0).getSubMenu().findItem(item).setChecked(true);
 
         // Close the navigation drawer
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

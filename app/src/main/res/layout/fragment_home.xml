@@ -19,31 +19,28 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Encontrei um objeto! :]"
+            android:text="Encontrei um objeto!"
             android:paddingRight="20dp"
             android:paddingLeft="20dp"
             android:id="@+id/button_achei"
             android:layout_margin="20dp"
             android:onClick="clique"
-            android:background="@color/colorPrimaryLight"
+            android:background="@color/light_indigo"
             android:layout_centerHorizontal="true" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Perdi um objeto! :["
+            android:text="Perdi um objeto!"
             android:paddingRight="16dp"
             android:paddingLeft="16dp"
             android:id="@+id/button_perdi"
             android:layout_below="@+id/button_achei"
             android:background="@color/amber"
+            android:layout_centerHorizontal="true"
             android:onClick="clique"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:layout_alignLeft="@+id/button_achei"
-            android:layout_alignStart="@+id/button_achei"
-            android:layout_alignRight="@+id/button_achei"
-            android:layout_alignEnd="@+id/button_achei" />
+            android:layout_marginBottom="20dp" />
 
 
 
