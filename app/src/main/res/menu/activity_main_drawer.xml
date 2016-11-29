@@ -29,7 +29,7 @@
         </menu>
     </item>
 
-    <item android:title="Comunicação">
+   <!-- <item android:title="Comunicação">
         <menu>
             <item
                 android:id="@+id/nav_share"
@@ -40,7 +40,7 @@
                 android:icon="@drawable/ic_menu_send"
                 android:title="Enviar" />
         </menu>
-    </item>
+    </item>]-->
 
     <item android:title="Perfil">
         <menu>

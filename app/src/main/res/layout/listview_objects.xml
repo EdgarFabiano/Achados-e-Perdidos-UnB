@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:background="#cccccc"
+    >
+
+    <ImageView
+        android:id="@+id/imageState"
+        android:layout_width="60dp"
+        android:src="@drawable/lost"
+        android:layout_height="42dp"
+
+
+        />
+
+    <TextView
+        android:id="@+id/textState"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/imageState"
+        android:layout_alignTop="@+id/imageState"
+        android:text="São Paulo - SP"
+        android:textSize="20sp"
+        android:textColor="#333333"
+        android:paddingLeft="5dp"
+        />
+
+    <TextView
+        android:id="@+id/textCapital"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textState"
+        android:layout_toRightOf="@+id/imageState"
+        android:text="São Paulo"
+        android:textColor="#333333"
+        android:paddingLeft="5dp"
+        />
+
+    <TextView
+        android:id="@+id/textArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textState"
+        android:layout_alignParentRight="true"
+        android:text="100000"
+        android:textColor="#333333"
+        />
+</RelativeLayout>

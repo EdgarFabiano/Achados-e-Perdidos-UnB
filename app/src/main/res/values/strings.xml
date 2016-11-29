@@ -14,9 +14,11 @@
     <string-array name="locais_spinner">
         <item>Escolha o departamento</item>
         <item>CIC</item>
-        <item>ICC Sul</item>
-        <item>ICC Norte</item>
-        <item>ICC Centro</item>
+        <item>FD</item>
+        <item>IDA</item>
+        <item>FS</item>
+        <item>FEF</item>
+        <item>LET</item>
         <item>FT</item>
     </string-array>
 

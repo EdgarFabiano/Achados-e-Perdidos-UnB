@@ -11,34 +11,11 @@
     tools:context=".MainActivity">
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Objetos:"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        android:layout_marginTop="48dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/textView5" />
-
-    <ListView
+    <ListView android:id="@android:id/list"
         android:layout_width="300dp"
         android:layout_height="380dp"
-        android:id="@+id/list_view"
         android:entries="@array/objetos_view"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:text="Selecionar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button2"
-        android:background="@drawable/mybutton"
-        android:layout_marginBottom="17dp"
-        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
 

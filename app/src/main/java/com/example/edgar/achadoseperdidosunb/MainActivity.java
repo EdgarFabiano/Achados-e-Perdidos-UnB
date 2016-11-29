@@ -30,10 +30,13 @@ import com.example.edgar.achadoseperdidosunb.Fragments.PerdiFragment;
 import java.util.ArrayList;
 import java.util.List;
 
+import static android.R.attr.fragment;
+
 public class MainActivity extends AppCompatActivity {
     private NavigationView navigationView;
     public static List<ObjetoInfo> lista = new ArrayList<>();
     public static List<ObjetoInfo> minhas = new ArrayList<>();
+
 
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -47,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        minhas.add(new ObjetoInfo("Celular Motorola","Cor branca", "FT", "Auditório da Elétrica"));
         lista.add(new ObjetoInfo("Celular Motorola","Cor branca", "FT", "Auditório da Elétrica"));
         lista.add(new ObjetoInfo("Notebook Lenovo", "Cor cinza", "CIC", "Sala de reuniões 1"));
         lista.add(new ObjetoInfo("Guarda-chuva", "Verde", "PAT", "PAT BT-45"));
@@ -124,11 +128,11 @@ public class MainActivity extends AppCompatActivity {
                 } /*else if (id == R.id.nav_departamentos) {
                     fragmentClass = DepartamentosFragment.class;
 
-                }*/else if (id == R.id.nav_share) {
+                }else if (id == R.id.nav_share) {
 
                 } else if (id == R.id.nav_send) {
 
-                } else if (id == R.id.nav_logout) {
+                }*/ else if (id == R.id.nav_logout) {
                     Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
@@ -136,26 +140,31 @@ public class MainActivity extends AppCompatActivity {
 
                 }
 
-                try {
-                    fragment = (Fragment) fragmentClass.newInstance();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-
-                // Insert the fragment by replacing any existing fragment
-                FragmentManager fragmentManager = getSupportFragmentManager();
-                fragmentManager.beginTransaction().replace(R.id.flContent, fragment).commit();
-
-                item.setChecked(true);
-                setTitle(item.getTitle());
-
-                // Close the navigation drawer
-                DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-                drawer.closeDrawer(GravityCompat.START);
+                setFragment(fragmentClass, item);
 
                 return true;
             }
         });
+    }
+
+    public void setFragment(Class fragmentClass, MenuItem item){
+        Fragment fragment = new HomeFragment();
+        try {
+            fragment = (Fragment) fragmentClass.newInstance();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        // Insert the fragment by replacing any existing fragment
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.flContent, fragment).commit();
+
+        item.setChecked(true);
+        setTitle(item.getTitle());
+
+        // Close the navigation drawer
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
     }
 
     public void clique(View view){
